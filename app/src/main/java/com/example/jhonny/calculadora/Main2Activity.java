@@ -13,9 +13,9 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
     EditText numero1;
     EditText numero2;
     EditText resultado;
-    int num1;
-    int num2;
-    int res;
+    float num1;
+    float num2;
+    float res;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,24 +29,24 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
         container.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if(checkedId == R.id.radioButton){
-                    num1 = Integer.parseInt(numero1.getText().toString());
-                    num2 = Integer.parseInt(numero2.getText().toString());
+                if(checkedId == R.id.suma){
+                    num1 = Float.parseFloat(numero1.getText().toString());
+                    num2 = Float.parseFloat(numero2.getText().toString());
                     res = num1 + num2;
                     resultado.setText(String.valueOf(res));
-                }else if(checkedId == R.id.radioButton2){
-                    num1 = Integer.parseInt(numero1.getText().toString());
-                    num2 = Integer.parseInt(numero2.getText().toString());
+                }else if(checkedId == R.id.resta){
+                    num1 = Float.parseFloat(numero1.getText().toString());
+                    num2 = Float.parseFloat(numero2.getText().toString());
                     res = num1 - num2;
                     resultado.setText(String.valueOf(res));
-                }else if(checkedId == R.id.radioButton3){
-                    num1 = Integer.parseInt(numero1.getText().toString());
-                    num2 = Integer.parseInt(numero2.getText().toString());
+                }else if(checkedId == R.id.multiplicacion){
+                    num1 = Float.parseFloat(numero1.getText().toString());
+                    num2 = Float.parseFloat(numero2.getText().toString());
                     res = num1 * num2;
                     resultado.setText(String.valueOf(res));
-                }else if(checkedId == R.id.radioButton4){
-                    num1 = Integer.parseInt(numero1.getText().toString());
-                    num2 = Integer.parseInt(numero2.getText().toString());
+                }else if(checkedId == R.id.division){
+                    num1 = Float.parseFloat(numero1.getText().toString());
+                    num2 = Float.parseFloat(numero2.getText().toString());
                     res = num1 / num2;
                     resultado.setText(String.valueOf(res));
                 }
